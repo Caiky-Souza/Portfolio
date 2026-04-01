@@ -2,7 +2,7 @@
 :root {
     --font-size: 1.5rem;
     --font-color: white;
-    --background-color: #04040e;
+    --background-color: #111827;
     --font-family: sans-serif;
     --sec-color: #0e0d0d9f;
     --max-width: 1000px;
@@ -82,7 +82,6 @@ nav a:hover {
 
 
 /* Main */
-
 .info-container {
     flex-direction: column;
     /*grid-template-columns: repeat(3, 1fr);
@@ -100,7 +99,7 @@ nav a:hover {
     gap:1rem;
 }
 .main-image {
-    margin: 1.5rem 0 0;
+    margin: 5rem 0 5rem;
     flex-direction: column;
     align-items: center;;
     justify-content: space-evenly;
@@ -118,6 +117,7 @@ nav a:hover {
 }
 .desc {
     text-align: left;
+    line-height: 1.5;
 }
 
 /* SKILLS */
@@ -204,7 +204,6 @@ nav a:hover {
         flex-direction:row;
         align-items: center;
         justify-items: center;
-        margin: 4rem 0 0;
         
     }
     .desc {
