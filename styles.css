@@ -6,6 +6,8 @@
     --font-family: sans-serif;
     --sec-color: gray;
     --max-width: 1000px;
+    --terc-color: #0072ff;
+    --terc-color-2: #194d8d;
 }
 * {
     margin: 0;
@@ -38,7 +40,7 @@ body {
     padding: 2rem;
     max-width: var(--max-width);
     margin:auto;
-    justify-content: flex-end;
+    justify-content: center;
 }
 nav a {
     font-size: calc(var(--font-size) * 0.75);
@@ -50,7 +52,8 @@ nav a {
     transition:0.3s ease;
 }
 nav a:hover {
-    border-color: #0072ff;
+    border-color: var(--terc-color);
+    
 }
 .my-image {
     width: 60%;
@@ -77,11 +80,7 @@ nav a:hover {
     gap:1rem;
 }
 .my-image {
-    animation-name: sliding;
-    animation-duration: 5s;
-    animation-timing-function:ease-in-out;
-    animation-iteration-count: infinite;
-}
+    animation: sliding 2s ease-in-out infinite alternate;}
 .my-image-head {
     flex-direction: column;
     gap:1rem;
@@ -91,6 +90,7 @@ nav a:hover {
     align-items: center;;
     justify-content: space-evenly;
     text-align: center;
+    gap: 1rem;
 }
 .title {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -120,6 +120,25 @@ nav a:hover {
     .main-image-comp {
     grid-column: 2/4
 }
+    button {
+        display:none;
+    }
+}
+.main-button {
+    max-width:200px;
+    margin-top: 1rem;
+    height: 45px;
+    font-size: calc(var(--font-size) * 0.8);
+    color: var(--font-color);
+    background: var(--terc-color);
+    border: 2px solid var(--background-color);
+    border-radius:8px;
+    transition:0.3s;
+    animation:  1s ease-in-out infinite alternate;
+}
+.main-button:hover {
+    transform: scale(110%);
+    background-color: var(--terc-color);
 }
 @media (min-width: 460px){
     .title, .subtitle, .desc {
@@ -132,11 +151,15 @@ nav a:hover {
     .main-image {
         gap:2rem;
         flex-direction:row;
-        align-items: normal;
+        align-items: center;
+        justify-items: center;
         
     }
     .desc {
         font-size: calc(var(--font-size) * 0.65);
+    }
+    .nav-container {
+        justify-content: flex-end;
     }
 }
 @media (min-width:1000px){
@@ -164,7 +187,16 @@ nav a:hover {
 }
 
 @keyframes sliding {
-    0% {transform: translateY(5px);}
-    50% {transform: translateY(-5px);}
-    100% {transform: translateY(5px);}
+    0% {transform: translateY(5);}
+    100% {transform: translateY(-5px);}
+}
+@keyframes shine {
+    from{
+  
+        box-shadow: 0 0 10px var(--terc-color-2);
+    }
+    to {
+  
+        ox-shadow: 0 0 10px var(--terc-color-2);
+    }
 }
