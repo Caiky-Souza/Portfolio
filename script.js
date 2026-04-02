@@ -16,7 +16,7 @@ function create_terminal(repository){
                         
                         </div>
                         
-                        <a class ="view-source">View Source</a>
+                        <a class ="view-source" href="${repository.html_url}" target="_blank">View Source</a>
                     </div>`
     projects_grid = document.querySelector(".projects-grid");
     projects_grid.appendChild(terminal);

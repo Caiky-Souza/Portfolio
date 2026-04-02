@@ -66,7 +66,7 @@ nav a {
     padding-bottom: 0.5rem;
     transition:0.3s ease;
 }
-nav a:any-link {
+nav a:any-link, .view-source:any-link {
     color: white;
     text-decoration: none;
 }
@@ -150,6 +150,7 @@ section {
     align-items: center;
     background-color: var(--sec-color);
     transition: 0.1s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 .icons-container {
     display:flex;
@@ -160,6 +161,7 @@ section {
     width: 25px;
 }
 .skill-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.15); 
     border: 1px solid var(--terc-color);
     transform: translateY(-10%)
 }
@@ -181,16 +183,13 @@ section {
 .terminal {
     border-radius: 50px;
     animation: ease-in-out 2s infinite alternate terminal-sliding1;
-    transition: 0.2s ease-in-out
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 h2 {
+    border-bottom: 1px solid var(--terc-color);
+    padding-bottom: 1rem;
     margin-bottom:3rem;
 }
-.terminal:hover {
-    transform: scale(105%) translateY(-5%);
-    /*box-shadow: 5px 5px 10px 10px rgba(46, 45, 45, 0.658);*/
-}
-
 .terminal-body{
     justify-content: space-between;
     display: flex;
