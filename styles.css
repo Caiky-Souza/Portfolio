@@ -3,7 +3,7 @@
     --font-size: 1.5rem;
     --font-color: white;
     --background-color: #111827;
-    --font-family: sans-serif;
+    --font-family: inter, sans-serif;
     --sec-color: #0e0d0d9f;
     --max-width: 1000px;
     --terc-color: #0072ff;
@@ -16,11 +16,17 @@
 .grid {
     display: grid;
 }
-.sec-color {
-    background-color: gray;
-    min-width:10px;
-    min-height: 10px;
+.red {
+    background-color:red;
 }
+
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+
 .flex {
     display:flex;
     justify-content: space-between;
@@ -82,6 +88,13 @@ nav a:hover {
 
 
 /* Main */
+main {
+    flex-direction: column;
+    gap: 3rem;
+}
+section {
+    width:100%;
+}
 .info-container {
     flex-direction: column;
     /*grid-template-columns: repeat(3, 1fr);
@@ -99,7 +112,7 @@ nav a:hover {
     gap:1rem;
 }
 .main-image {
-    margin: 5rem 0 5rem;
+    margin: 1.5rem 0 0;
     flex-direction: column;
     align-items: center;;
     justify-content: space-evenly;
@@ -157,6 +170,95 @@ nav a:hover {
     grid-template-columns: repeat(2,1fr);
     gap: 1rem;
 }
+
+.projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+.terminal {
+    border-radius: 50px;
+    animation: ease-in-out 2s infinite alternate terminal-sliding1;
+    transition: 0.2s ease-in-out
+}
+h2 {
+    margin-bottom:3rem;
+}
+.terminal:hover {
+    transform: scale(105%) translateY(-5%);
+    /*box-shadow: 5px 5px 10px 10px rgba(46, 45, 45, 0.658);*/
+}
+
+.terminal-body{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width:100%;
+    padding:0.5rem 1rem 1rem 1rem;
+    border-radius: 0 0 10px 10px;
+    font-size: calc(var(--font-size) * 0.9);
+    height:230px;
+}
+.terminal-title {
+    
+    text-align:center;
+}
+.localhost {
+    color: green;
+}
+.shell{
+    color: rgb(60, 60, 168)
+}
+.terminal-header {
+    border-radius:10px 10px 0 0;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(26, 25, 25)
+}
+.terminal-header > div {
+    justify-content: flex-start;
+    align-items:center;
+    gap: 0.5rem;
+    padding:0.5rem;
+}
+
+.button {
+    width:10px;
+    height:10px;
+    border-radius:50px;
+}
+
+.view-source {
+    background-color: rgb(26, 25, 25);
+    padding:0.5rem;
+    border-radius:8px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 0.5rem;
+    transition: 0.2s
+}
+.view-source:hover {
+    color: green;
+    transform: scale(110%);
+}
+.main-button {
+    
+    
+    height: 45px;
+    font-size: calc(var(--font-size) * 0.8);
+    color: var(--font-color);
+    background: var(--terc-color);
+    border: 2px solid var(--background-color);
+    border-radius:8px;
+    transition:0.1s;
+    animation:  1s ease-in-out infinite alternate;
+}
+
+.main-button:hover {
+    background-color: var(--terc-color-2);
+}
 @media (max-width:460px){
     :root {
         --font-size: 1rem;
@@ -176,21 +278,9 @@ nav a:hover {
         width: 100%;
     }
 }
-.main-button {
-    
-    
-    height: 45px;
-    font-size: calc(var(--font-size) * 0.8);
-    color: var(--font-color);
-    background: var(--terc-color);
-    border: 2px solid var(--background-color);
-    border-radius:50px;
-    transition:0.1s;
-    animation:  1s ease-in-out infinite alternate;
-}
-.main-button:hover {
-    background-color: var(--terc-color-2);
-}
+
+
+
 @media (min-width: 460px){
     .title, .subtitle, .desc {
         text-align: left;
@@ -200,6 +290,7 @@ nav a:hover {
         height:200px;
     }
     .main-image {
+        margin: 5rem 0 4rem;
         gap: 50px;
         flex-direction:row;
         align-items: center;
@@ -217,11 +308,14 @@ nav a:hover {
         margin-top: 1rem;
     }
     .main-button:hover {
-    transform: scale(110%);
-}
-.icon {
-    width: 35px;
-}
+        transform: scale(110%);
+    }
+    .icon {
+        width: 35px;
+    }
+    .terminal-body {
+        height:300px;
+    }
 }
 @media (min-width:1000px){
     :root {
@@ -244,16 +338,36 @@ nav a:hover {
         font-size: calc(var(--font-size) * 0.75)
     }
     .icon {
-    width: 50px;
-}
+        width: 50px;
+    }
+    .projects-grid {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .terminal-body {
+        height: 300px;
+        font-size: calc(var(--font-size) * 0.65);
+    }
     
-    
 }
+
+/* ANIMAÇÕES CSS*/
 
 @keyframes sliding {
     0% {transform: translateY(5);}
     100% {transform: translateY(-5px);}
 }
+
+@keyframes terminal-sliding1 {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(10px);}
+}
+
+@keyframes terminal-sliding2 {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
+}
+
 @keyframes shine {
     from{
   
