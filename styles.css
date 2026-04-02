@@ -3,6 +3,7 @@
     --font-size: 1.5rem;
     --font-color: white;
     --background-color: #111827;
+    --background-color2: #0d121d;
     --font-family: inter, sans-serif;
     --sec-color: #0e0d0d9f;
     --max-width: 1000px;
@@ -112,7 +113,7 @@ section {
     gap:1rem;
 }
 .main-image {
-    margin: 1.5rem 0 0;
+    margin: 4rem 0 0;
     flex-direction: column;
     align-items: center;;
     justify-content: space-evenly;
@@ -178,7 +179,7 @@ section {
     grid-template-rows: repeat(3,1fr);
     justify-content: center;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
 }
 .terminal {
     border-radius: 50px;
@@ -260,6 +261,7 @@ h2 {
 .main-button:hover {
     background-color: var(--terc-color-2);
 }
+
 @media (max-width:460px){
     :root {
         --font-size: 1rem;
@@ -291,7 +293,7 @@ h2 {
         height:200px;
     }
     .main-image {
-        margin: 5rem 0 4rem;
+        margin: 7rem 0 4rem;
         gap: 50px;
         flex-direction:row;
         align-items: center;
