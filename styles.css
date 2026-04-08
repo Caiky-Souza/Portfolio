@@ -1,18 +1,21 @@
 /* Main Variables */
 :root {
-    --font-size: 1.5rem;
+    --font-size: 2.5rem;
     --font-color: white;
     --background-color: #111827;
     --background-color2: #0d121d;
     --font-family: inter, sans-serif;
     --sec-color: #0e0d0d9f;
-    --max-width: 1000px;
+    --max-width: 1500px;
     --terc-color: #0072ff;
-    --terc-color-2: #194d8d;
+    --terc-color-2: #317dda;
 }
 * {
     margin: 0;
     box-sizing: border-box;
+}
+.terc-color {
+    color: var(--terc-color-2)
 }
 .gray {
     background-color:rgba(19, 18, 18, 0.836);
@@ -67,7 +70,7 @@ position: sticky;
     justify-content: center;
 }
 nav a {
-    font-size: calc(var(--font-size) * 0.75);
+    font-size: calc(var(--font-size) * 0.5);
     align-items: flex-end;
     border-style: solid;
     border-color: transparent;
@@ -85,8 +88,8 @@ nav a:hover {
 }
 .my-image {
     width: 60%;
-    width:120px;
-    height: 120px;
+    width:160px;
+    height: 100%;
     border-radius: 300px;
     object-fit: cover;
 }
@@ -102,7 +105,7 @@ main {
     gap: 3rem;
 }
 section {
-    width:100%;
+    width:95%;
 }
 .info-container {
     flex-direction: column;
@@ -118,7 +121,7 @@ section {
 }
     .my-image-head {
     flex-direction: column;
-    gap:1rem;
+    gap:3rem;
 }
 .main-image {
     margin: 4rem 0 0;
@@ -129,17 +132,22 @@ section {
     
 }
 .title {
+    margin-top: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: calc(var(--font-size) * 1.4);
+    font-size: calc(var(--font-size) * 1.5);
 }
 
+.subtitle {
+    font-size: calc(var(--font-size) * 0.85);
+}
 .subtitle, .desc {
-    font-size: calc(var(--font-size) * 0.75);
     text-align: center;
 }
 .desc {
+    font-size: calc(var(--font-size) * 0.75);
     text-align: left;
     line-height: 1.5;
+    color: rgb(190, 188, 188)
 }
 
 /* SKILLS */
@@ -258,8 +266,8 @@ h2 {
 }
 .main-button {
     
-    
-    height: 45px;
+    padding:0.5rem;
+    width:100%;
     font-size: calc(var(--font-size) * 0.8);
     color: var(--font-color);
     background: var(--terc-color);
@@ -268,13 +276,16 @@ h2 {
     transition:0.1s;
     animation:  1s ease-in-out infinite alternate;
 }
+.main-button-a:any-link {
+    text-decoration: none;
+}
 
 .main-button:hover {
     background-color: var(--terc-color-2);
 }
 
 .aboutme-background-container {
-    font-size: calc(var(--font-size) * 0.7);
+    font-size: calc(var(--font-size) * 0.8);
 }
 pre {
     white-space: pre-wrap;
@@ -307,7 +318,7 @@ pre {
 
 @media (max-width:460px){
     :root {
-        --font-size: 1rem;
+        --font-size: 1.5rem;
     }
     nav {
         padding:1rem;
@@ -365,14 +376,15 @@ pre {
 }
 @media (min-width:1000px){
     :root {
-        --font-size: 1.5rem;
+        --font-size: 2rem;
     }
     .my-image {
-        width:250px;
-        height:250px;
+        width:360px;
+        height:360px;
     }
     .my-image-head {
         justify-content: flex-start;
+        max-width: 900px;
     }
     .title {
         font-size: calc(var(--font-size) * 2.25);
