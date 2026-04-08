@@ -47,6 +47,18 @@ async function main(){
     located_repos.forEach(element =>{
         create_terminal(element);
     })
+
+    let pre = document.querySelector("pre")
+    if (innerWidth > 1000){
+        pre.innerHTML = `<span class="blue">"whoami"</span>: {<br> 
+    <span class="json-property">"Name": <span class="green">"Caiky"</span>, <br></span>
+    <span class="json-property">"Role": "Student", <br></span>
+    <span class="json-property">"Study Area": "Computer Science",<br></span>
+    <span class="json-property">"Location": "Rio de Janeiro, Brazil",<br></span>
+    <span class="json-property">"Interests": ["Cybersecurity", "Web Development", "Watch Dogs 2 :D"],<br></span>
+    <span class="json-property">"Status": "Learning Flask & Python"</span>
+}`
+    }
     
 }
 main();

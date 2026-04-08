@@ -14,11 +14,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+.gray {
+    background-color:rgba(19, 18, 18, 0.836);
+    
+}
 .grid {
     display: grid;
 }
 .red {
     background-color:red;
+}
+
+.blue {
+    background-color:rgb(50, 50, 151);
 }
 
 .green {
@@ -186,9 +194,12 @@ section {
     animation: ease-in-out 2s infinite alternate terminal-sliding1;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
-h2 {
+.section-title {
     border-bottom: 1px solid var(--terc-color);
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    
+}
+h2 {
     margin-bottom:3rem;
 }
 .terminal-body{
@@ -260,6 +271,38 @@ h2 {
 
 .main-button:hover {
     background-color: var(--terc-color-2);
+}
+
+.aboutme-background-container {
+    font-size: calc(var(--font-size) * 0.7);
+}
+pre {
+    white-space: pre-wrap;
+    padding: 1.5rem;
+    
+}
+.about-json {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+.about-json:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); 
+}
+.json-property {
+    background-color: rgb(19, 18, 18);;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+.json-property:hover {
+    border-radius: 10px;
+
+    padding:0 0.5rem;
+    transform: translateY(-20px);
+    font-size: calc(var(--font-size) * 0.9);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
 }
 
 @media (max-width:460px){
@@ -350,6 +393,9 @@ h2 {
     .terminal-body {
         height: 300px;
         font-size: calc(var(--font-size) * 0.65);
+    }
+    pre {
+        padding:2rem;
     }
     
 }
