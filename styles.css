@@ -209,14 +209,7 @@ section {
     align-items: start;
     gap: 2rem;
 }
-.project-tag {
-    display:inline-block;
-    padding:0.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--terc-color);
-    background-color: var(--sec-color);
 
-}
 .card {
     border-radius: 50px;
     animation: ease-in-out 2s infinite alternate terminal-sliding1;
@@ -230,8 +223,10 @@ section {
 h2 {
     margin-bottom:3rem;
 }
-.terminal-body{
-    padding: 1rem 2rem 2rem 2rem;
+.project-body{
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #ffffff15;
     gap:3rem;
     justify-content: space-between;
     display: flex;
@@ -242,6 +237,45 @@ h2 {
     border-radius: 0 0 10px 10px;
     font-size: calc(var(--font-size) * 0.7);
     
+}
+.project-title {
+    display: flex;
+    justify-content: center;
+    font-size: calc(var(--font-size) * 0.8);
+    font-weight: bold;
+}
+.project-tags-div {
+    display:flex;
+    gap: 1rem;
+}
+.project-tag {
+    font-size: calc(var(--font-size) * 0.5);
+    display:inline-block;
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--terc-color);
+    background-color: var(--sec-color);
+
+}
+
+.view-source {
+    background-color: rgb(26, 25, 25);
+    padding:0.8rem 1.5rem;
+    border-radius:8px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 0.5rem;
+    transition: 0.2s;
+    gap: 1rem;
+}
+.view-source p {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-source:hover {
+    background-color: var(--terc-color);
+    transform: scale(110%);
 }
 .terminal-title {
     font-size: calc(var(--font-size) * 0.75);
@@ -259,19 +293,6 @@ h2 {
 .shell{
     color: rgb(60, 60, 168)
 }
-.terminal-header {
-    padding:1rem;
-    font-size: calc(var(--font-size) * 0.9);
-    border-radius:10px 10px 0 0;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: rgb(26, 25, 25)
-}
-.terminal-header > div {
-    justify-content: flex-start;
-    align-items:center;
-    gap: 0.5rem;
-    padding:0.5rem;
-}
 
 .button {
     width:10px;
@@ -279,19 +300,7 @@ h2 {
     border-radius:50px;
 }
 
-.view-source {
-    background-color: rgb(26, 25, 25);
-    padding:0.5rem;
-    border-radius:8px;
-    align-self: center;
-    justify-self: center;
-    margin-top: 0.5rem;
-    transition: 0.2s
-}
-.view-source:hover {
-    color: green;
-    transform: scale(110%);
-}
+
 .main-button {
     font-weight: bold;
     padding:0.8rem 1rem;
@@ -455,9 +464,9 @@ pre {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3,1fr);
     }
-    .terminal-body {
+    .project-body {
 
-        height: 300px;
+        padding: 3rem;
         font-size: calc(var(--font-size) * 0.65);
     }
     pre {
