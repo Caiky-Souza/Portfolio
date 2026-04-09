@@ -246,6 +246,7 @@ h2 {
 }
 .project-tags-div {
     display:flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 .project-tag {
