@@ -10,9 +10,9 @@ function create_terminal(repository){
                         <p class="terminal-title">${repository.name.charAt(0).toUpperCase() + repository.name.slice(1)}</p>
                     </div>
                     <div class="terminal-body">
-                        <div>
-                            <p><span class="localhost">caiky@localhost:</span> <span class ="shell">~$</span> cat README.md</p>
-                            <p>DESC: <span class="terminal-description">${repository.description}</span></p>
+                        <div class="tbody-text">
+                            <p><span class="localhost">caiky@localhost:</span> <span class ="shell">~$</span> cat <span class="blue">README.md</span></p>
+                            <p><span class="terminal-description">${repository.description}</span></p>
                         
                         </div>
                         
@@ -50,13 +50,13 @@ async function main(){
 
     let pre = document.querySelector("pre")
     if (innerWidth > 1000){
-        pre.innerHTML = `<span class="blue">"whoami"</span>: {<br> 
+        pre.innerHTML = `<span class="blue whoami">"whoami"</span>: {<br><br>
     <span class="json-property">"Name": <span class="green">"Caiky"</span>, <br></span>
     <span class="json-property">"Role": "Student", <br></span>
     <span class="json-property">"Study Area": "Computer Science",<br></span>
     <span class="json-property">"Location": "Rio de Janeiro, Brazil",<br></span>
     <span class="json-property">"Interests": ["Cybersecurity", "Web Development", "Watch Dogs 2 :D"],<br></span>
-    <span class="json-property">"Status": "Learning Flask & Python"</span>
+    <span class="json-property">"Status": "Learning Flask & Python"</span><br>
 }`
     }
     

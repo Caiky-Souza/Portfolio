@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 /* Main Variables */
 :root {
     --font-size: 2.5rem;
     --font-color: white;
-    --background-color: #111827;
+    --background-color: #080c13;
     --background-color2: #0d121d;
     --font-family: "Inter", sans-serif;
     --sec-color: #0e0d0d9f;
@@ -33,6 +34,7 @@
 
 .blue {
     background-color:rgb(50, 50, 151);
+    padding:0.2rem;
 }
 
 .green {
@@ -116,7 +118,7 @@ section {
     margin:auto;
     max-width: var(--max-width);
     padding:1rem;
-    gap:1rem;
+    gap:5rem;
 }
 .my-image {
     animation: sliding 2s ease-in-out infinite alternate;
@@ -160,15 +162,15 @@ section {
 /* SKILLS */
 
 .section-title {
+    
     font-size: calc(var(--font-size) * 1.25);
 }
 .skill-container {
     display:flex;
-
+    padding:1rem;    
     width: 100%;
-    gap:0.75rem;
     border-radius: 8px;
-    padding: 1rem;
+
     border: 1px solid transparent;
     flex-direction: column;
     align-items: center;
@@ -177,12 +179,14 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 .icons-container {
+        padding: 2rem;
+    flex-wrap: wrap;
     display:flex;
     gap: 1rem;
 
 }
 .icon {
-    width: 25px;
+    width:25px;
 }
 .skill-container:hover {
     box-shadow: 0 10px 20px rgba(0, 123, 255, 0.15); 
@@ -190,11 +194,12 @@ section {
     transform: translateY(-10%)
 }
 .skill-title {
+        padding: 2rem;
     font-size: calc(var(--font-size) * 1);
 }
 .skill-grid {
-    grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
 }
 
 .projects-grid {
@@ -218,19 +223,27 @@ h2 {
     margin-bottom:3rem;
 }
 .terminal-body{
+    padding: 1rem 2rem 2rem 2rem;
+    gap:3rem;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
     background-color: black;
     width:100%;
-    padding:0.5rem 1rem 1rem 1rem;
+
     border-radius: 0 0 10px 10px;
-    font-size: calc(var(--font-size) * 0.9);
-    height:230px;
+    font-size: calc(var(--font-size) * 0.7);
+    
 }
 .terminal-title {
     font-size: calc(var(--font-size) * 0.75);
     text-align:center;
+}
+.tbody-text {
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    line-height: 1.6;
 }
 .localhost {
     color: green;
@@ -239,8 +252,8 @@ h2 {
     color: rgb(60, 60, 168)
 }
 .terminal-header {
- 
-    font-size: calc(var(--font-size) * 0.75);
+    padding:1rem;
+    font-size: calc(var(--font-size) * 0.9);
     border-radius:10px 10px 0 0;
     grid-template-columns: repeat(3, 1fr);
     background-color: rgb(26, 25, 25)
@@ -300,7 +313,11 @@ pre {
     padding: 1.5rem;
     
 }
+.whoami {
+    font-size: calc(var(--font-size) * 0.7);
+}
 .about-json {
+    font-size: calc(var(--font-size) * 0.5);
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -324,6 +341,21 @@ pre {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
 }
 
+.pill {
+    
+    border-radius: 50px;
+    display:flex;
+    background-color: var(--terc-color);
+    font-size: calc(var(--font-size) * 0.8);
+    padding:0.5rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+.skill-image {
+   object-fit: cover;
+        width:100%;
+        max-height: 300px;
+}
 @media (max-width:460px){
     :root {
         --font-size: 1.5rem;
@@ -409,13 +441,14 @@ pre {
         font-size: calc(var(--font-size) * 0.75)
     }
     .icon {
-        width: 50px;
+        width: 30px;
     }
     .projects-grid {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(3,1fr);
     }
     .terminal-body {
+
         height: 300px;
         font-size: calc(var(--font-size) * 0.65);
     }
@@ -423,6 +456,21 @@ pre {
         padding:2rem;
     }
     
+    .about-json {
+        font-size: calc(var(--font-size) * 0.8)
+    }
+    .whoami {
+        font-size: calc(var(--font-size) * 1.3)
+    }
+    .icon {
+        width:30px;
+    }
+    .pill {
+        font-size: calc(var(--font-size) * 0.8);
+    }
+    .skill-grid {
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 
 /* ANIMAÇÕES CSS*/
