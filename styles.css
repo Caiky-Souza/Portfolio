@@ -8,7 +8,7 @@
     --background-color: #080c13;
     --background-color2: #0d121d;
     --font-family: "Inter", sans-serif;
-    --sec-color: #0e0d0d9f;
+    --sec-color: rgba(19, 18, 18, 0.836);
     --max-width: 1200px;
     --terc-color: #0072ff;
     --terc-color-2: #317dda;
@@ -209,7 +209,15 @@ section {
     align-items: start;
     gap: 2rem;
 }
-.terminal {
+.project-tag {
+    display:inline-block;
+    padding:0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--terc-color);
+    background-color: var(--sec-color);
+
+}
+.card {
     border-radius: 50px;
     animation: ease-in-out 2s infinite alternate terminal-sliding1;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
@@ -310,14 +318,14 @@ h2 {
 }
 pre {
     white-space: pre-wrap;
-    padding: 1.5rem;
+    padding: 2rem;
     
 }
 .whoami {
-    font-size: calc(var(--font-size) * 0.7);
+    font-size: calc(var(--font-size) * 0.85);
 }
 .about-json {
-    font-size: calc(var(--font-size) * 0.5);
+    font-size: calc(var(--font-size) * 0.6);
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -338,7 +346,7 @@ pre {
     padding:0 0.5rem;
     transform: translateY(-20px);
     font-size: calc(var(--font-size) * 0.9);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+
 }
 
 .pill {
@@ -454,13 +462,14 @@ pre {
     }
     pre {
         padding:2rem;
+        max-width:50%;
     }
     
     .about-json {
         font-size: calc(var(--font-size) * 0.8)
     }
     .whoami {
-        font-size: calc(var(--font-size) * 1.3)
+        font-size: calc(var(--font-size) * 1.1)
     }
     .icon {
         width:30px;

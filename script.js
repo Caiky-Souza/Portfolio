@@ -1,19 +1,23 @@
-function create_terminal(repository){
+function create_terminal(repository, i){
     terminal = document.createElement("div")
-    terminal.classList.add("terminal");
+    terminal.classList.add("card",`card-${i}`);
+    let tags = repository.topics
+    let tags_html = ""
+    tags.forEach((tag)=>{
+        tags_html = tags_html.concat(` <span class="project-tag">${tag}</span>`)
+    });
+    console.log(tags)
     terminal.innerHTML = `<div class="grid terminal-header">
-                        <div class="flex">
-                                <div class="red button"></div>
-                                <div class="yellow button"></div>
-                                <div class="green button"></div> 
-                            </div>
                         <p class="terminal-title">${repository.name.charAt(0).toUpperCase() + repository.name.slice(1)}</p>
                     </div>
                     <div class="terminal-body">
                         <div class="tbody-text">
-                            <p><span class="localhost">caiky@localhost:</span> <span class ="shell">~$</span> cat <span class="blue">README.md</span></p>
+
                             <p><span class="terminal-description">${repository.description}</span></p>
                         
+                        </div>
+                        <div>  
+                            ${tags_html}
                         </div>
                         
                         <a class ="view-source" href="${repository.html_url}" target="_blank">View Source</a>
@@ -29,7 +33,7 @@ async function get_repos(){
     let request = await fetch(endpoint);
     let repo_list = await request.json();
 
-    
+    console.log(repo_list)
     return repo_list;
 }
 async function main(){
@@ -41,24 +45,14 @@ async function main(){
     repo_list.forEach(element => {
         if (repos_to_locate.includes(element.name)){
             located_repos.push(element);
+
         }
     });  
-    
+    let i = 0
     located_repos.forEach(element =>{
-        create_terminal(element);
+        i++
+        create_terminal(element, i);
     })
-
-    let pre = document.querySelector("pre")
-    if (innerWidth > 1000){
-        pre.innerHTML = `<span class="blue whoami">"whoami"</span>: {<br><br>
-    <span class="json-property">"Name": <span class="green">"Caiky"</span>, <br></span>
-    <span class="json-property">"Role": "Student", <br></span>
-    <span class="json-property">"Study Area": "Computer Science",<br></span>
-    <span class="json-property">"Location": "Rio de Janeiro, Brazil",<br></span>
-    <span class="json-property">"Interests": ["Cybersecurity", "Web Development", "Watch Dogs 2 :D"],<br></span>
-    <span class="json-property">"Status": "Learning Flask & Python"</span><br>
-}`
-    }
     
 }
 main();
