@@ -405,6 +405,8 @@ pre {
      font-size: calc(var(--font-size) * 0.8);
 }
 .email-button {
+    display:flex;
+    text-align: center;
     font-size: calc(var(--font-size) * 0.7);
 }
 .buttons-div {
