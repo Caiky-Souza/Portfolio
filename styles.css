@@ -182,13 +182,14 @@ section {
         padding: 2rem;
     flex-wrap: wrap;
     display:flex;
+    justify-content: center;;
     gap: 1rem;
 
 }
 .icon {
     width:25px;
 }
-.skill-container:hover {
+.skill-container:hover, .project-body:hover {
     box-shadow: 0 10px 20px rgba(0, 123, 255, 0.15); 
     border: 1px solid var(--terc-color);
     transform: translateY(-10%)
@@ -233,7 +234,7 @@ h2 {
     flex-direction: column;
     background-color: black;
     width:100%;
-
+    transition:0.3s;
     border-radius: 0 0 10px 10px;
     font-size: calc(var(--font-size) * 0.7);
     
@@ -241,10 +242,12 @@ h2 {
 .project-title {
     display: flex;
     justify-content: center;
-    font-size: calc(var(--font-size) * 0.8);
+    font-size: calc(var(--font-size) * 0.9);
     font-weight: bold;
 }
 .project-tags-div {
+    margin:auto;
+    justify-content: center;
     display:flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -332,10 +335,10 @@ pre {
     
 }
 .whoami {
-    font-size: calc(var(--font-size) * 0.85);
+    font-size: calc(var(--font-size) * 1);
 }
 .about-json {
-    font-size: calc(var(--font-size) * 0.6);
+    font-size: calc(var(--font-size) * 0.75);
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
@@ -472,7 +475,7 @@ pre {
     }
     pre {
         padding:2rem;
-        max-width:50%;
+        max-width:55%;
     }
     
     .about-json {
