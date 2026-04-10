@@ -165,7 +165,7 @@ section {
     
     font-size: calc(var(--font-size) * 1.25);
 }
-.skill-container {
+.skill-container, .contact-card {
     display:flex;
     padding:1rem;    
     width: 100%;
@@ -189,7 +189,7 @@ section {
 .icon {
     width:25px;
 }
-.skill-container:hover, .project-body:hover {
+.skill-container:hover, .project-body:hover, .contact-card:hover {
     box-shadow: 0 10px 20px rgba(0, 123, 255, 0.15); 
     border: 1px solid var(--terc-color);
     transform: translateY(-10%)
@@ -317,6 +317,12 @@ h2 {
     transition:0.1s;
     animation:  1s ease-in-out infinite alternate;
     font-width: bold;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.main-button:any-link {
+    text-decoration: none;
 }
 .main-button-a:any-link {
     text-decoration: none;
@@ -334,15 +340,19 @@ pre {
     padding: 2rem;
     
 }
+
 .whoami {
     font-size: calc(var(--font-size) * 1);
 }
 .about-json {
-    font-size: calc(var(--font-size) * 0.75);
+    font-size: calc(var(--font-size) * 0.60);
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     transition: 0.2s;
+}
+.curiosity {
+    color: rgb(131, 131, 131)
 }
 .about-json:hover {
     transform: translateY(-20px);
@@ -376,6 +386,49 @@ pre {
    object-fit: cover;
         width:100%;
         max-height: 300px;
+}
+.contact-card {
+    margin-bottom: 5rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 3rem;
+    max-width: 700px;
+    align-self:center;
+}
+.contact-title {
+    font-size: calc(var(--font-size) * 1.5);
+  
+}
+.contact-desc {
+    text-align: center;
+     font-size: calc(var(--font-size) * 0.8);
+}
+.email-button {
+    font-size: calc(var(--font-size) * 0.7);
+}
+.buttons-div {
+    font-size: calc(var(--font-size) * 0.7);
+    align-items: center;;
+    flex-direction:column;
+    width:90%;
+    gap:1rem;
+}
+.buttons-div > div {
+    
+    display: flex;
+    gap: 1rem;
+}
+.gray-button {
+    background-color: rgb(37, 37, 37);
+    font-size: calc(var(--font-size) * 0.7);
+}
+footer {
+    font-size: calc(var(--font-size) * 0.6);
+    background-color: var(--sec-color);
+    padding: 3rem 2rem;
+    display:flex;
+    justify-content: center;;
 }
 @media (max-width:460px){
     :root {
@@ -493,6 +546,18 @@ pre {
     .skill-grid {
         grid-template-columns: repeat(4,1fr);
     }
+    .contact-desc {
+        font-size: calc(var(--font-size) * 1);
+    }
+    pre > div {
+    margin-left: 5rem;
+}
+.email-button {
+    font-size: calc(var(--font-size) * 0.8);
+}
+.buttons-div {
+    font-size: calc(var(--font-size) * 0.9);
+}
 }
 
 /* ANIMAÇÕES CSS*/
