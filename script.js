@@ -41,7 +41,7 @@ async function get_repos(){
 }
 async function main(){
     
-    repos_to_locate = ["Portfolio","pyorganizer","Spotify-Analyzer"]
+    repos_to_locate = ["Portfolio","pyorganizer","Spotify-Analyzer","BIN-Pyconverter"]
     repo_list = await get_repos();
 
     located_repos = []
